@@ -1,0 +1,47 @@
+.categoryList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    gap: 10px;
+    margin: 3vh 0;
+}
+
+.categoryList > p{
+    width: 40%;
+    height: 5vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+
+@media screen and (min-width: 1366px){
+    
+    .productCard_container{
+        max-width: 1366px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        gap: 25px;
+    }
+
+    .categoryList > p{
+        width: 10%;
+        height: 3vh;
+        background-color: rgb(65, 153, 65);
+        color: white;
+    }
+    .categoryList > p:hover{
+        background-color: rgb(18, 94, 18);
+        cursor: pointer;
+    }
+}

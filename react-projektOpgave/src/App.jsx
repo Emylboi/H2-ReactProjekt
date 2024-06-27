@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Products from "./pages/products/Products";
+import ProductDetails from "./pages/productDetails/ProductDetails";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     {path: "/about", element: <About/>},
     {path: "/contact", element: <Contact/>},
     {path: "/products", element: <Products/>},
+    {path: "/products/:id", element: <ProductDetails/>},
   ])
   
   return (

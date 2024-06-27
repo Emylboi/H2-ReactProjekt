@@ -1,0 +1,12 @@
+@media screen and (min-width: 1366px){
+    
+    .productContainer{
+        max-width: 1366px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        gap: 25px;
+    }
+}
