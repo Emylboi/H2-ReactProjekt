@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./productIndividual.module.css";
+import { FaStar } from "react-icons/fa";
 
 const ProductIndividual = ({ product }) => {
   console.log("Product reviews:", product.reviews);
@@ -8,6 +9,14 @@ const ProductIndividual = ({ product }) => {
 
   const handleBackClick = () => {
     navigate(`/products/`);
+  };
+
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 0; i < rating; i++) {
+      stars.push(<FaStar key={i} className={styles.star} />);
+    }
+    return stars;
   };
 
   return (
@@ -51,11 +60,13 @@ const ProductIndividual = ({ product }) => {
           <div>
             {product.reviews.map((review, index) => (
               <div key={index} className={styles.review}>
-                <p>Rating: {review.rating}</p>
+                <div className={styles.rating}>
+                  {renderStars(review.rating)}
+                </div>
                 <p>{review.reviewerName}</p>
                 <p>Date: {new Date(review.date).toLocaleDateString()}</p>
                 <p>{review.reviewerEmail}</p>
-                <br/>
+                <br />
                 <p>Comment: {review.comment}</p>
               </div>
             ))}

@@ -12,6 +12,7 @@ const Contact = () => {
         title="Contact Us!"
         subTitle=""
         headerImg={product?.images[0]}
+        color="aqua"
       />
       <NewsLetter />
     </section>

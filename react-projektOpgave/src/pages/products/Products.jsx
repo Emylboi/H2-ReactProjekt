@@ -4,6 +4,9 @@ import PageHeader from "../../components/pageHeader/PageHeader";
 import ProductCard from "../../components/productCard/ProductCard";
 import useFetch from "../../hooks/useFetch";
 import styles from "./products.module.css";
+import ShoppingCart from "../../components/shoppingCart/ShoppingCart";
+import SectionHeader from "../../components/sectionHeader/SectionHeader";
+
 
 const Products = () => {
   /* const { data: product } = useFetch(`https://dummyjson.com/products/2`); */
@@ -53,6 +56,9 @@ const Products = () => {
           <ProductCard product={product} key={product.id} />
         ))}
       </ul>
+
+        <SectionHeader title="Your Cart"/>
+      <ShoppingCart/>
     </>
   );
 };

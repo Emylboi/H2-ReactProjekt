@@ -25,7 +25,7 @@
     }
 }
 
-.heartIcon{
+.heartIcon, .shopIcon{
     font-size: 2.5rem;
     padding-bottom: 2vh;
 }

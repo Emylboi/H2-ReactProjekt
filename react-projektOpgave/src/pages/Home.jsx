@@ -6,7 +6,7 @@ import UserFavorites from "../components/userFavorites/UserFavorites";
 import useFetch from "../hooks/useFetch";
 
 const Home = () => {
-  const { data: product } = useFetch(`https://dummyjson.com/products/1`);
+  const { data: product } = useFetch(`https://dummyjson.com/products/5`);
 
   return (
     <section>
@@ -14,10 +14,11 @@ const Home = () => {
         title="Nice Products"
         subTitle="Here you can see all our nice products"
         headerImg={product?.images[0]}
+        color="white"
       />
       <SectionHeader title="Customer Favorites" />
       <UserFavorites/>
-      <SectionHeader title="Mine Favoritter" />
+      <SectionHeader title="Your Favorites" />
       <MyFavorites/>
       <NewsLetter/>
     </section>

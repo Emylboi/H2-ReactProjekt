@@ -19,10 +19,10 @@ const NewsLetter = () => {
 
   return (
     <div className={styles.newsletter_container}>
-      <SectionHeader title="Tilmeld dig vores nyhedsbrev!" />
+      <SectionHeader title="Subscribe to our newsletter!" />
       <form onSubmit={handleSubmit} className={styles.newsletter_form}>
         <label>
-          Din Email:
+          Your Email:
           <input
             type="email"
             value={email}
@@ -30,10 +30,10 @@ const NewsLetter = () => {
             required
           />
         </label>
-        <button type="submit">Tilmeld</button>
+        <button type="submit">Subscribe</button>
       </form>
 
-      <NewsLetterModal isOpen={isModalOpen} onRequestClose={closeModal} />
+      <NewsLetterModal isOpen={isModalOpen} onRequestClose={closeModal} email={email} />
     </div>
   );
 };

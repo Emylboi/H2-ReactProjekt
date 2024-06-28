@@ -1,56 +1,68 @@
 .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    padding: 1rem 2rem;
-    z-index: 999;
-  }
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 1rem 2rem;
+  z-index: 999;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+  margin-top: 25vh;
+  background-color: white;
+  color: black;
+  gap: 10px;
+  font-size: 1.5rem;
   
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    list-style: none;
-    margin-top: 20vh;
-  
-    li {
-      .active {
-        color: rgb(255, 182, 140);
-  
-        &:after {
-          transform: scaleX(1);
-          transform-origin: bottom left;
-        }
+
+  li {
+    .active {
+      color: rgb(255, 182, 140);
+
+      &:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
     }
   }
-  
-  .open {
-    display: flex;
-    flex-flow: column wrap;
+}
+
+.nav-links > li{
+  border: 1px solid black;
+}
+
+.open {
+  display: flex;
+  flex-flow: column wrap;
+  list-style: none;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .burger-menu {
     list-style: none;
-    text-decoration: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
-  
-  @media (min-width: 768px) {
-    .burger-menu {
-      list-style: none;
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      z-index: 200;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-  
-    .nav-links {
-      display: flex;
-      flex-direction: row;
-      width: auto;
-      gap: 50px;
-      margin-top: 0;
-    }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 50px;
+    margin-top: 0;
   }
-  
+
+  .nav-links > li{
+    border: none;
+  }
+}

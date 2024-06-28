@@ -11,6 +11,7 @@ const About = () => {
         title="You should know this about us!"
         subTitle=""
         headerImg={product?.images[0]}
+        color="black"
       />
       <SectionHeader title="About Us" /> 
     </section>

@@ -1,10 +1,10 @@
-import React from 'react';
-import Modal from 'react-modal';
+import React from "react";
+import Modal from "react-modal";
 import styles from "./newsletterModal.module.css";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
-const NewsLetterModal = ({ isOpen, onRequestClose }) => {
+const NewsLetterModal = ({ isOpen, onRequestClose, email }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -13,8 +13,9 @@ const NewsLetterModal = ({ isOpen, onRequestClose }) => {
       className={styles.Modal}
       overlayClassName={styles.Overlay}
     >
-      <h2>Abonnent vellykkedes!</h2>
-      <p>Tak for at abonnere på vores nyhedsbrev!</p>
+      <h2>Subscribtion successful!</h2>
+      <p>Thanks for subscribing to the newsletter!</p>
+      <p>Email signed up: {email}</p>
       <button onClick={onRequestClose}>Luk</button>
     </Modal>
   );

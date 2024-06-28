@@ -1,6 +1,10 @@
 import { useState } from "react";
 import styles from "./category.module.css";
 
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+};
+
 const Category = ({ category, setCategory, value }) => {
   const [hover, setHover] = useState(false);
   return (
@@ -12,7 +16,7 @@ const Category = ({ category, setCategory, value }) => {
       onMouseLeave={() => setHover(false)}
       onClick={() => setCategory(value)}
     >
-      {value}
+      {capitalizeFirstLetter(value)}
     </p>
   );
 };

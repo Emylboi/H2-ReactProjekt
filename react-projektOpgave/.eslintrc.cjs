@@ -17,5 +17,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "no-unused-vars": ["off", { varsIgnorePattern: "UsersListApi" }],
+    "react/prop-types": "off",
   },
 }
